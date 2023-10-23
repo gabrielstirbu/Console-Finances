@@ -107,8 +107,28 @@ console.log("Total: " + totalSumFin);
 
 // Application calculates the average of the changes in Profit/Losses over the entire period.
 
+// Initialize variables to keep track of the sum of changes and the count of changes.
+var sumOfChanges = 0;
+var countOfChanges = 0;
+
+// Loop through the finances array to calculate the changes and update the sum and count.
+for (var i = 1; i < finances.length; i++) {
+  var currentProfitLoss = finances[i][1];
+  var previousProfitLoss = finances[i - 1][1];
+  var change = currentProfitLoss - previousProfitLoss;
+  sumOfChanges = sumOfChanges + change;
+  countOfChanges++;
+}
+
+// Calculate the average change.
+var averageChange = sumOfChanges / countOfChanges;
+
+// Round the result to two decimal places.
+averageChange = averageChange.toFixed(2);
+
+console.log("Average Change: " + averageChange);
+
 // Application calculates the greatest increase in Profit/Losses over the entire period (Date and Amount).
 
 // Application calculates the greatest decrease in Profit/Losses over the entire period (Date and Amount).
 
-// Application prints the above Financial Analysis calculations to the console.
