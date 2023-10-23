@@ -98,6 +98,13 @@ console.log("Total Months: " + finances.length);
 
 // Application calculates the net total amount of Profit/Losses over the entire period.
 
+var totalSumFin = 0;
+
+for (var i = 0; i < finances.length; i++) {
+  totalSumFin = totalSumFin + finances[i][1];
+}
+console.log("Total: " + totalSumFin);
+
 // Application calculates the average of the changes in Profit/Losses over the entire period.
 
 // Application calculates the greatest increase in Profit/Losses over the entire period (Date and Amount).
