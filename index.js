@@ -129,6 +129,21 @@ averageChange = averageChange.toFixed(2);
 console.log("Average Change: " + averageChange);
 
 // Application calculates the greatest increase in Profit/Losses over the entire period (Date and Amount).
+var greatestIncreaseAmount = 0;
+var greatestIncreaseDate = '';
+
+for (var i = 1; i < finances.length; i++) {
+  var currentProfitLoss = finances[i][1];
+  var previousProfitLoss = finances[i - 1][1];
+  var change = currentProfitLoss - previousProfitLoss;
+
+  // Check if the current change is greater than the greatest increase.
+  if (change > greatestIncreaseAmount)
+    greatestIncreaseAmount = change;
+  greatestIncreaseDate = finances[i][0];
+}
+
+console.log("Greatest Increase in Profits/Losses: " + greatestIncreaseDate + " (" + greatestIncreaseAmount + ")");
 
 // Application calculates the greatest decrease in Profit/Losses over the entire period (Date and Amount).
 
