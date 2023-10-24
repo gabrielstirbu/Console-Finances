@@ -1,6 +1,6 @@
-## Financial Analysis Application
-
 ## Console-Finances
+
+## Financial Analysis Application
 
 # This project analyzes financial data to calculate various metrics based on a given dataset. 
 
@@ -44,6 +44,9 @@ git clone https://github.com/gabrielstirbu/Console-Finances
 - **JavaScript**: The core programming language used for data analysis and calculations.
 - **HTML**: Used for displaying the results in the browser.
 - **GitHub**: The project is hosted on GitHub for version control and collaboration.
+
+## Deploy Aplication
+Link: https://gabrielstirbu.github.io/Console-Finances/
 
 ## Author
  Gabriel Stirbu
