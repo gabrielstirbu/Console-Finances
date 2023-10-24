@@ -94,7 +94,8 @@ console.log("----------------------------")
 
 // Application calculates the total number of months in the dataset.
 
-console.log("Total Months: " + finances.length);
+var totalMonths = finances.length
+console.log("Total Months: " + totalMonths);
 
 // Application calculates the net total amount of Profit/Losses over the entire period.
 
@@ -130,20 +131,39 @@ console.log("Average Change: " + averageChange);
 
 // Application calculates the greatest increase in Profit/Losses over the entire period (Date and Amount).
 var greatestIncreaseAmount = 0;
-var greatestIncreaseDate = '';
+var greatestIncreaseDate = "";
 
+// Loop through the finances array to calculate the changes and update the greatest increase.
 for (var i = 1; i < finances.length; i++) {
   var currentProfitLoss = finances[i][1];
   var previousProfitLoss = finances[i - 1][1];
   var change = currentProfitLoss - previousProfitLoss;
 
   // Check if the current change is greater than the greatest increase.
-  if (change > greatestIncreaseAmount)
-    greatestIncreaseAmount = change;
-  greatestIncreaseDate = finances[i][0];
+  if (change > greatestIncreaseAmount) {
+    greatestIncreaseAmount = change; // Update the increase decrease amount.
+    greatestIncreaseDate = finances[i][0]; //Update the date of the greatest incrase.
+  }
 }
 
-console.log("Greatest Increase in Profits/Losses: " + greatestIncreaseDate + " (" + greatestIncreaseAmount + ")");
+console.log("Greatest Increase in Profits/Losses: " + greatestIncreaseDate + " ($" + greatestIncreaseAmount + ")");
 
 // Application calculates the greatest decrease in Profit/Losses over the entire period (Date and Amount).
 
+var greatestDecreaseAmount = Infinity; // Initialize to positive infinity.
+var greatestDecreaseDate = "";
+
+// Loop through the finances array to calculate the changes and update the greatest decrease.
+for (var i = 1; i < finances.length; i++) {
+  var currentProfitLoss = finances[i][1];
+  var previousProfitLoss = finances[i - 1][1];
+  var change = currentProfitLoss - previousProfitLoss;
+
+  // Check if the current change is less than the greatest decrease.
+  if (change < greatestDecreaseAmount) {
+    greatestDecreaseAmount = change; // Update the greatest decrease amount.
+    greatestDecreaseDate = finances[i][0]; // Update the date of the greatest decrease.
+  }
+}
+
+console.log("Greatest Decrease in Profits/Losses: " + greatestDecreaseDate + " ($" + greatestDecreaseAmount + ")");
