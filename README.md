@@ -31,13 +31,6 @@ When you run the code, the resulting financial analysis will look similar to the
 - **Average Change Calculation**: The average change is calculated by finding the average of the changes in Profit/Losses over the entire period.
 - **Greatest Increase and Decrease Calculation**: The greatest increase and decrease in Profit/Losses are determined by iterating through the dataset and tracking the changes to find the maximum and minimum values.
 
-### Technologies Used
-
-- **JavaScript**: The core programming language used for data analysis and calculations.
-- **HTML**: Used for displaying the results in the browser.
-- **GitHub**: The project is hosted on GitHub for version control and collaboration.
-
-
 ## Installation
 
 1. Clone this repository to your local machine using Git:
@@ -46,11 +39,14 @@ git clone https://github.com/gabrielstirbu/financial-analysis-application
 3. Open the HTML file in your browser.
 4. View the financial analysis in the browser's developer console.
 
-## Technical Details
+## Technologies Used
+
+- **JavaScript**: The core programming language used for data analysis and calculations.
+- **HTML**: Used for displaying the results in the browser.
+- **GitHub**: The project is hosted on GitHub for version control and collaboration.
 
 ## Author
-
-# Gabriel Stirbu
+ Gabriel Stirbu
 # Contact : 
 Email: gabriel.stirbu@hotmail.com
 
