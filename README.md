@@ -34,7 +34,7 @@ When you run the code, the resulting financial analysis will look similar to the
 ## Installation
 
 1. Clone this repository to your local machine using Git:
-git clone https://github.com/gabrielstirbu/financial-analysis-application
+git clone https://github.com/gabrielstirbu/Console-Finances
 2. Open the project folder in your code editor.
 3. Open the HTML file in your browser.
 4. View the financial analysis in the browser's developer console.
